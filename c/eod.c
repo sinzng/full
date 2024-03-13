@@ -1,3 +1,5 @@
+
+
 #include <stdio.h>
 
 int eod(int x) {
@@ -9,10 +11,10 @@ int eod(int x) {
 		printf("%d is odd\n",x);
 		}
 void main() {
+    
 	int x; 
 	printf("input number: ");
 	scanf("%d", &x);
-	
 	
 	eod(x);
 }
