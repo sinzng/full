@@ -18,28 +18,28 @@ USE `testdb`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `st_grade`
+-- Table structure for table `st_info`
 --
 
-DROP TABLE IF EXISTS `st_grade`;
+DROP TABLE IF EXISTS `st_info`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `st_grade` (
+CREATE TABLE `st_info` (
   `ST_ID` int(11) NOT NULL,
-  `Linux` int(11) DEFAULT NULL,
-  `DB` int(11) DEFAULT NULL,
+  `NAME` varchar(20) DEFAULT NULL,
+  `DEPT` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`ST_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `st_grade`
+-- Dumping data for table `st_info`
 --
 
-LOCK TABLES `st_grade` WRITE;
-/*!40000 ALTER TABLE `st_grade` DISABLE KEYS */;
-INSERT INTO `st_grade` VALUES (202401,90,80),(202402,70,95),(202403,80,65);
-/*!40000 ALTER TABLE `st_grade` ENABLE KEYS */;
+LOCK TABLES `st_info` WRITE;
+/*!40000 ALTER TABLE `st_info` DISABLE KEYS */;
+INSERT INTO `st_info` VALUES (202401,'LeeGilDong','Game'),(202402,'KimGilDong','Computer'),(202403,'HongGilDong','Computer');
+/*!40000 ALTER TABLE `st_info` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
