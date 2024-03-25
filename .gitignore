@@ -15,4 +15,7 @@ c/**/*
 !c/**/Makefile.*
 
 ## java
+##scala
+scala/**/project
+scala/**/target
 **/*.class
