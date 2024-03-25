@@ -15,14 +15,20 @@ c/**/*
 !c/**/Makefile.*
 
 ## java
+**/*.class
+
 ##scala
 scala/**/project
 scala/**/target
-**/*.class
+
 ## maven
 maven/**/target
 
 ## nodejs
 node/**/node_modules
 node/**/package-lock.json
+
+## python venv 
+python/**/.venv
+python/**/__pycache__/
 
