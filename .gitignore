@@ -19,3 +19,5 @@ c/**/*
 scala/**/project
 scala/**/target
 **/*.class
+## maven
+maven/**/target

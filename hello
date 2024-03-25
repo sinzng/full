@@ -1,0 +1,32 @@
+<project>
+    <groupid>com.moon<groupid>
+    <artifactID>HelloWorld</artifactID>
+    <modelVersion>4.0.0</modelVersion>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupid>org.apache.maven.plugins</groupid>
+                <artifactID>maven-compiler-plugin</artifactID>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8<target>
+                </configuration>
+            </plugin>
+                        <plugin>
+                <groupid>org.apache.maven.plugins</groupid>
+                <artifactID>maven-jar-plugin</artifactID>
+                <version>3.0.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>HelloWorld</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
