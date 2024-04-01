@@ -15,7 +15,7 @@
                     <target>1.8<target>
                 </configuration>
             </plugin>
-                        <plugin>
+            <plugin>
                 <groupid>org.apache.maven.plugins</groupid>
                 <artifactID>maven-jar-plugin</artifactID>
                 <version>3.0.2</version>
