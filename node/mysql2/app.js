@@ -1,7 +1,7 @@
 const { connect } = require("http2");
 const mysql = require("mysql2/promise");
 const env = require('dotenv').config({ path: "../../.env" });
- 
+
 
 const db = async () => {
     try{ 
@@ -26,8 +26,6 @@ const db = async () => {
             dept: "Computer"
         }
 
-
-        
         // inserted data's id
         let insertId = data.st_id;
 
