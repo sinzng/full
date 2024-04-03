@@ -5,4 +5,4 @@ install:
 ps : 
 	ps -ef | grep json-server
 kill:
-	kill -9 `ps -ef | grep json-server | cut -d " " -f8`	
+	kill -9 `ps -ef | grep json-server | cut -d " " -f8`
