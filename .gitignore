@@ -27,10 +27,12 @@ maven/**/target
 ## nodejs
 node/**/node_modules
 node/**/package-lock.json
+node/conf/pool.js
 
 ## python venv 
 python/**/.venv
 python/**/__pycache__/
+
 ## oracle
 oracle/node/dbConfig.js
 oracle/node/node_modules
