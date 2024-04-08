@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>quiz6</h3>
+    <script>
+        let input = prompt("두개의 숫자(배열의 크기, 최대값)를 입력하세요:"); 
+        input = input.split(",");
+        var array = new Array()
+        document.write("배열의 길이: " + input[0] +"<br>"); 
+        let i =0;
+        for(i=0; i< input[0]; i++){
+            array[i] = Math.floor(Math.random() * input[1] + 1);
+            for(j=0; j<i; j++){
+                if (array[j] == array[i]){
+                    i--;
+                    continue; 
+                }
+            }
+                
+        }
+        
+        document.write("입력된 배열: " + array +"<br>"); 
+
+
+    </script>
+    
+</body>
+</html>

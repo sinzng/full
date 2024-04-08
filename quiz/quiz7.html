@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>경과시간 구하기</title>
+</head>
+<body>
+    <h3>Date객체로 현재 시간 알아내기</h3>
+    <hr />
+    <script>
+        let now = new Date(); 
+        let old = new Date(2022,7,1,9,0,0);
+        document.write("현재 시간:" + now.toUTCString()+"<br><hr>" );
+        document.write("기준 시간:" + old.toUTCString()+"<br><hr>" );
+        let diff = now - old;  
+        let sec = diff / 1000; 
+        let min = sec / 60; 
+        let hour = min /60; 
+        let day = hour /24; 
+        
+        document.write("경과 시간 - 일 : " + Math.round(day) + "<br>"); 
+        document.write("경과 시간 - 시 : " + Math.round(hour) + "<br>"); 
+        document.write("경과 시간 - 분 : " + Math.round(min) + "<br>"); 
+        document.write("경과 시간 - 초 : " + sec + "<br><hr />"); 
+
+
+    </script>
+
+    
+</body>
+</html>

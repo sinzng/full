@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a,b 두 변수의 값을 맞바꾸는 방법 </title>
+</head>
+<body>
+    <h3>a,b 두 변수의 값을 맞바꾸는 방법</h3>
+    <script>
+        let n = 5;
+        let array = new Array(n);
+        let temp=0; 
+        document.write("<br>배열의 길이 :" + n + "<br>");
+        document.write("<br>전체 배열의 값 :" )
+        for(let i=0; i<n; i++){
+            array[i]= Math.floor(Math.random() * 100 + 1);
+            document.write( array[i]+ "&nbsp");  
+        }
+        document.write("<br>Reverse배열의 값 :") 
+        for(let i=0; i<2; i++){
+            temp = array[i]; 
+            array[i] = array[n-i];
+            array[n-i]=temp;
+        }
+        for(let i=0; i<n; i++)
+            document.write( array[i]+ "&nbsp");
+    </script>
+</body>
+</html>

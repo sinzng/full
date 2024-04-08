@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>리터럴 표기법으로 Book 객체 만들기 </title>
+<script>
+    let book = {
+        title : "스며드는 리눅스", 
+        author :"문준현", 
+        totalPage : "350",
+        category : "IT",
+        price : 30000,
+        leftover : 350, 
+        rentalState : 1, 
+        rentalUser : "",
+        rentalDay : 0,
+
+        //메소드 작성 
+        reading : function(page){
+            this.leftover -= page; 
+            return this.leftover;
+        },
+
+        rental: function(user, day){
+            this.rentalUser = user; 
+            this.rentalDay = day; 
+            this.rentalState = 0; 
+            return this.rentalState; 
+        }
+    };
+    </script>
+</head>
+<body>
+    <h3>리터럴 표기법으로 Book 객체 만들기</h3>
+    <script>
+        document.write("Book :");
+        document.write("<br>제목 :", book.title);
+        document.write("<br>저자 :", book.author);
+        document.write("<br>장르 :", book.category);
+        document.write("<br>가격 :", book.price + "원 <hr />");
+
+        document.write("현재 전체 페이지 ", book.totalPage);
+        document.write("중 잔여 페이지가 ",book.reading(50) + "페이지 남았습니다.<hr />"); 
+        book.rental("임예준", 30); 
+        let state = {0:"대여중", 1:"대여가능"};
+        document.write(
+            "현재 " + 
+            book.title + 
+            "는 " + 
+            book.rentalUser + 
+            "님에게" +
+            book.rentalDay + 
+            "일 동안 " + 
+            state[book.rentalState] + 
+            "입니다."
+        ); 
+    </script>
+
+</body>
+
+</html>
