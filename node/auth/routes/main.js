@@ -175,6 +175,11 @@ app.post('/update', (req, res) => {
     
   });
 
+
+
+
+
+
   // login
 app.post('/login', (req, res) => {
     const { id, pw } = req.body;
@@ -224,6 +229,7 @@ app.post('/register', (req, res) => {
         }
     }
 });
+
 
 
 module.exports = app; 
