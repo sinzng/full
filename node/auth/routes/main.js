@@ -110,23 +110,69 @@ app.post('/selectQuery', (req, res) => {
 
 app.post('/insert', (req, res) => {
     const { id, pw } = req.body; 
-    const result = connection.query("insert into user values(?, ?)", [id, pw]); 
+    if(id == "" || pw == "" ) {
+        res.send("User-id 와 Password를 입력하세요");
+    } else {
+        let result = connection.query('select * from user where userid=?', [id]);
+        if(result.length>0) {
+            res.writeHead(200);
+            var templete =`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Error</title>
+                    <meta charset="utf-8" />
+                </head>
+                <body>
+                    <div>
+                    <h3 style="margin-left: 30px">Register Failed</h3>
+                    <h4 style="margin-left: 30px">이미 존재하는 아이디 입니다.</h4>
+                    </div>
+                </body>
+                </html>
+            `;
+            res.end(templete);
+    } else {
+    result = connection.query("insert into user values(?, ?)", [id, pw]); 
     console.log(result);
     res.redirect('/selectQuery?id=' + req.body.id);
+    }
+}
 });
 
 app.post('/update', (req, res) => {
     const { id, pw } = req.body;
-    const result = connection.query('update user set passwd=? where userid=?', [pw, id]);
+    if(id == "" || pw == "" ) {
+        res.send("User-id 와 Password를 입력하세요");
+    } else {
+    const result = connection.query('select * from user where userid=?', [id]);
     console.log(result);
-    res.redirect('/selectQuery?id=' + req.body.id);
-  });
+    if( result.length == 0 ){
+        templete_nodata(res);
+    } else {
+        const result = connection.query('update user set passwd=? where userid=?', [pw, id]);
+        console.log(result);
+        res.redirect('/selectQuery?id=' + req.body.id);
+    }
+}
+});
 
   app.post('/delete', (req, res) => {
     const id = req.body.id;
-    const result = connection.query('delete from user where userid=?', [id]);
-    console.log(result);
-    res.redirect('/select');
+    if ( id == '') {
+        res.send('User-id를 입력하세요.');
+    } else {
+        const result = connection.query('select * from user where userid=?', [id]);
+        console.log(result);
+        if(result.length ==0 ) {
+            templete_nodata(res);
+        } else {
+            const result = connection.query('delete from user where userid=?', [id]);
+            console.log(result);
+            res.redirect('/select');
+        }
+    }
+    
   });
 
   // login
@@ -138,13 +184,13 @@ app.post('/login', (req, res) => {
     }
     if (id == 'admin' || id == 'root') {
         console.log(id + " => Administrator Logined")
-        res.redirect("https://tecoble.techcourse.co.kr/static/715b91aab894cf4240578d9b4ec613b8/b9fcf/linux-distribution.png")
+        res.redirect('member.html?id=' +id)
     } else {
         console.log(id + " => User Logined")
-        res.redirect('error.html')
-
+        res.redirect('user.html?id=' +id)
     }
 }); 
+
 // register
 app.post('/register', (req, res) => {
     const { id, pw } = req.body;

@@ -84,3 +84,45 @@ div.noround {
     border-width: 1px;
     padding: 50px;
 }
+#menubar {
+    background : rgb(71, 69, 61);
+}
+#menubar ul {
+    margin : 0; 
+    padding : 0; 
+    width: 567; 
+}
+#menubar ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0px 15px; 
+}
+#menubar ul li a {
+    color: white;
+    text-decoration: none;
+}
+#menubar ul li a:hover{
+    color:#e2a7c6; 
+}
+table {
+    border-collapse: collapse;
+}
+th {
+    text-align: center;
+    padding: 5px;
+    height: 15px;
+    width: 100px; 
+}
+tbody {
+    text-align: left;
+    padding: 5px;
+    height: 15px;
+    width: 100px; 
+}
+thead, 
+tfoot{
+    background: rgb(130, 187, 203);
+}
+tbody tr:hover{
+    background: rgb(217, 166, 175);
+}
