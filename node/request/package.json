@@ -1,6 +1,7 @@
 {
-  "name": "jsonserver",
+  "name": "request",
   "version": "1.0.0",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,12 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "cookie-parser": "^1.4.6",
+    "circular-json": "^0.5.9",
     "express": "^4.19.2",
-    "morgan": "^1.10.0",
-    "path": "^0.12.7",
-    "xhr2": "^0.2.1"
-  },
-  "description": ""
+    "request": "^2.88.2"
+  }
 }
