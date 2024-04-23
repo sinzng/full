@@ -33,9 +33,15 @@ node/conf/*
 python/**/.venv
 python/**/__pycache__/
 python/secret.json
+python/**/imsi*
+python/**/somefolder*
+python/**/json*
+python/**/project01*
+
 
 ## oracle
 oracle/node/dbConfig.js
 oracle/node/node_modules
 oracle/node/package-lock.json
+oracle/**/myterror.csv
 
