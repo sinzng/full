@@ -46,7 +46,7 @@ print(type(dict))
 print(dict)
 print('-'*50)
 
-items = dict['items'][0]
+items = dict['items'][0] # 바로 뽑아냄
 print(type(items))
 print(items)
 print('-'*50)

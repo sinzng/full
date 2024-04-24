@@ -29,7 +29,7 @@ async def Hello():
     return "Hello World~!"
 
 @app.get('/getdata') 
-async def getdata(today = None):
+async def getdata(today = None): # None 타입 
 
     if today is None:
 
