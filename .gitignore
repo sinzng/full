@@ -38,6 +38,8 @@ python/**/somefolder*
 python/**/json*
 python/**/project01*
 
+## .c9
+.c9/
 
 ## oracle
 oracle/node/dbConfig.js
