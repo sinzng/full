@@ -1,5 +1,5 @@
 # step 1 : Base Images
-FROM python:3.9
+FROM node:16.20.0
 
 # step 2 : Package Install
 RUN apt -y update && apt -y upgrade && apt -y install git net-tools vim
@@ -10,11 +10,11 @@ WORKDIR '/root'
 # step 4 : Config file copy
 COPY .bashrc .
 COPY .exrc .
-COPY hello.py .
-RUN pip install bottle
+COPY hello.js .
+RUN npm install express
 
 # step 5 : open port
-EXPOSE 3000
+EXPOSE 8000
 
 # step 6 : Execution Program
-CMD ["python", "hello.py"]
+CMD ["node", "hello.js"]
