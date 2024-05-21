@@ -1,5 +1,5 @@
 # Step 1 : Base Images
-FROM python:3.9
+FROM python:3.10
 
 # Step 2 : Package Install
 RUN apt -y update && apt -y upgrade && apt -y install git net-tools vim
