@@ -33,6 +33,10 @@ node/conf/*
 react/**/package-lock.json
 react/**/node_modules
 
+## nestjs 
+nestjs/**/package-lock.json
+nestjs/**/node_modules
+
 ## python venv 
 python/**/.venv
 python/**/__pycache__/
