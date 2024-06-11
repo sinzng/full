@@ -1,23 +1,24 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
 
 class App extends Component {
-  state={
-    
-    count : 0 
-  }; 
+  state = {
+    count: 0,
+  };
+
   countup = () => {
     this.setState({
-      count : this.state.count + 1, 
+      count: this.state.count + 1,
     });
-  }; 
+  };
+
   render() {
-    return(
+    return (
       <div className="App">
-       <div>{this.state.count}</div>
-       <button onClick={this.handleChange}>Count Up!!</button>
-    </div>
-    )
+        <div>{this.state.count}</div>
+        <button onClick={this.countup}>Count up!!</button>
+      </div>
+    );
   }
 }
 
-export default App; 
+export default App;
