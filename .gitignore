@@ -56,4 +56,4 @@ oracle/node/package-lock.json
 oracle/**/myterror.csv
 
 ## .venv 
-/**/**/.venv
+**/**/.venv
