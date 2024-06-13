@@ -59,5 +59,4 @@ oracle/**/myterror.csv
 **/**/.venv
 
 ## dataset 
-tsukuyomi.* 
-tsukuyomi_new.* 
+/**/**/**/tsu*
