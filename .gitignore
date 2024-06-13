@@ -59,4 +59,7 @@ oracle/**/myterror.csv
 **/**/.venv
 
 ## dataset 
-/**/**/**/tsu*
+**/**/**/tsu*
+**/**/**/*.txt
+**/**/**/*.mp3
+**/**/**/*.m4a

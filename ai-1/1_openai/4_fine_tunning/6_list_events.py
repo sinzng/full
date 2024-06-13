@@ -1,4 +1,4 @@
-from openai from OpenAI
+from openai import OpenAI
 
 client = OpenAI()
 
