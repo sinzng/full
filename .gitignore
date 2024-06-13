@@ -63,3 +63,6 @@ oracle/**/myterror.csv
 **/**/**/*.txt
 **/**/**/*.mp3
 **/**/**/*.m4a
+
+## test
+**/test/
