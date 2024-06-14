@@ -4,17 +4,27 @@ from langchain.chat_models import ChatOpenAI
 from langchain.embeddings import HuggingFaceEmbeddings
 from llama_index import Document
 
+#BeautifulSoupReader 초기화 
 loader = BeautifulSoupReader()
 
+# URL에서 문서 로드 
 documents = loader.load_data(urls=["https://openai.com/blog/planning-for-agi-and-beyong"])
 print("Documents loaded successufully")
 print(f"Loaded documents: {documents}")
 
-Document_objects =[Document(text=doc.text, extra_info=doc.metadata) for doc in documents]
-embed_model = LangchainEmbedding(HuggingFaceEmbeddings(model_name="all-MiniLM-L6-V2"))
+# Document 객체 생성
+Document_objects =[Document(text=doc.text) for doc in documents]
+
+# 임베딩 모델 준비 
+embed_model = LangchainEmbedding(HuggingFaceEmbeddings(
+    model_name="all-MiniLM-L6-V2"
+))
 print("Embedding Model initialized successfully")
 
-llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo"))
+# LLM Predictor 준비
+llm_predictor = LLMPredictor(llm=ChatOpenAI(
+    temperature=0, model_name="gpt-3.5-turbo" #모델명
+))
 print("LLM Predictor initialized successfully")
 
 service_context = ServiceContext.from_defaults(
