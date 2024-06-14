@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "myheader.h": "c",
-        "stdio.h": "c"
-    },
-    "liveServer.settings.port": 5001
-}
