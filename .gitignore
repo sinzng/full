@@ -60,7 +60,8 @@ oracle/**/myterror.csv
 
 ## dataset 
 **/**/**/tsu*
-**/**/**/*.txt
+**/**/data/*.txt
+**/**/**/akazukin_all.txt
 **/**/**/*.mp3
 **/**/**/*.m4a
 
